@@ -4,7 +4,7 @@ const { hash, compare } = bcrypt;
 import fs from "fs";
 import { User } from "types/user.type";
 
-const SESSION_SECRET = process.env.SESSION_SECRET || "secret!@#$";
+const SESSION_SECRET = process.env.SESSION_SECRET!;
 
 const sessionStorage = createCookieSessionStorage({
   cookie: {
